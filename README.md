@@ -19,11 +19,8 @@ This example shows how to build a simple multi-tier web application using Kubern
 
 ### Prerequisites
 
-This example assumes that you have a working cluster. See the [Getting Started Guides](https://kubernetes.io/docs/setup/) for details about creating a cluster.
-
-**Tip:** View all the `kubectl` commands, including their options and descriptions in the [kubectl CLI reference](https://kubernetes.io/docs/user-guide/kubectl-overview/).
-
-All of the commands specified should be run from this directory.
+1) This example assumes that you have 1 Ansible, 1 Master and N no of worker node( Min 2 is recommended) with ubuntu16.04 OS server. See the [Getting Started Guides](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/) for details about creating a cluster.
+2) Install ansible package on Ansible node. See the [Ansible installation on ubuntu server](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#latest-releases-via-apt-ubuntu) 
 
 ### Create the Redis master pod
 
