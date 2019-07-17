@@ -95,10 +95,6 @@ Result: The guestbook displays in your browser:
 ### Kunernetes Uninstall
 
 In case, if you need to uninstall the k8s, execute the below command to clean the k8s installation.
-
-```console
-           "token:      eyJhbGciOiJSUzI1NiIsImtpZCI6IiJ9.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJrdWJlcm5ldGVzLWRhc2hib2FyZCIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VjcmV0Lm5hbWUiOiJhZG1pbi11c2VyLXRva2VuLXhqNDJ6Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6ImFkbWluLXVzZXIiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC51aWQiOiIyM2Q4MzliYi1kZDg4LTRhZDYtYTNmNi1mYzE5NzNiYTA1ZDMiLCJzdWIiOiJzeXN0ZW06c2VydmljZWFjY291bnQ6a3ViZXJuZXRlcy1kYXNoYm9hcmQ6YWRtaW4tdXNlciJ9.S_04dwa_E49GGhRQAa4of6WOTkPTR-y2AmNkDfbhk0WH6LloPqvCZHii-mIafpzWkOeACu4NGT7CcF-xaLdiTSoG--sbFxi8qkPzsRszTOtgYKokakYpWpLs4z9f2GCA8b1FNTe4TQi2J5ATUeqTiTf-kNy1QYjSxKOdPGU7LygfmbUnv2e_wCVFL8j8Gk76wPHpTLMYDqBtPwWJdS8lbqOZPDzpMNsYGEs878djPm1VgtLqlKL2dJv99WCBrz3vT-z_d1AquUBuXjBpe4HTnl_77XLxOQCod94lC1xr8QR-p6R3H3_pC5C75VUCPOl89ZIkrN-epOOjxAAKKv95yw"
-           
     ```console
     ansible-playbook reset-k8s.yaml 
     ```
