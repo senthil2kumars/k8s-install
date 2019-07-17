@@ -1,22 +1,6 @@
 # k8s-install
 Single master kubeadm installation on AWS ubuntu 16.04 Instance
 
-## Guestbook Example
-
-This example shows how to build a simple multi-tier web application using Kubernetes and Docker. The application consists of a web front end, Redis master for storage, and replicated set of Redis slaves, all for which we will create Kubernetes replication controllers, pods, and services.
-
-##### Table of Contents
-
- * [Prerequisites](#prerequisites)
- * [Install k8s](#install k8s)
- * [To access the kubernetes dashboard](#To access the kubernetes dashboard)
- * [Create the Redis slave pods](#create-the-redis-slave-pods)
- * [Create the Redis slave service](#create-the-redis-slave-service)
- * [Create the guestbook pods](#create-the-guestbook-pods)
- * [Create the guestbook service](#create-the-guestbook-service)
- * [View the guestbook](#view-the-guestbook)
- * [Cleanup](#cleanup)
-
 ### Prerequisites
 
 1) This example assumes that you have 1 Ansible, 1 Master and N no of worker node( Min 2 is recommended) with ubuntu16.04 OS server. See the [k8s installation doc.](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/) for details about creating a cluster.
@@ -28,7 +12,7 @@ Use the `kubernetes-install.yaml` file to create a single control-plane cluster 
 
 1. Before executing the ansible playbook, we need to update the Nodes IP address on the host file as example below.
 
-    ```console
+    ```
     [allservers]
     master 34.230.69.51 ansible_ssh_user=ubuntu
     worker1 54.237.234.166 ansible_ssh_user=ubuntu
@@ -108,3 +92,13 @@ You can access the kubernetes dashboard using https://:34.230.69.51:30014 with t
 Result: The guestbook displays in your browser:
 ![kubernetes dashboard](kubernetes-dashboard.png)
 
+### Kunernetes Uninstall
+
+In case, if you need to uninstall the k8s, execute the below command to clean the k8s installation.
+
+```console
+           "token:      eyJhbGciOiJSUzI1NiIsImtpZCI6IiJ9.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJrdWJlcm5ldGVzLWRhc2hib2FyZCIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VjcmV0Lm5hbWUiOiJhZG1pbi11c2VyLXRva2VuLXhqNDJ6Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6ImFkbWluLXVzZXIiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC51aWQiOiIyM2Q4MzliYi1kZDg4LTRhZDYtYTNmNi1mYzE5NzNiYTA1ZDMiLCJzdWIiOiJzeXN0ZW06c2VydmljZWFjY291bnQ6a3ViZXJuZXRlcy1kYXNoYm9hcmQ6YWRtaW4tdXNlciJ9.S_04dwa_E49GGhRQAa4of6WOTkPTR-y2AmNkDfbhk0WH6LloPqvCZHii-mIafpzWkOeACu4NGT7CcF-xaLdiTSoG--sbFxi8qkPzsRszTOtgYKokakYpWpLs4z9f2GCA8b1FNTe4TQi2J5ATUeqTiTf-kNy1QYjSxKOdPGU7LygfmbUnv2e_wCVFL8j8Gk76wPHpTLMYDqBtPwWJdS8lbqOZPDzpMNsYGEs878djPm1VgtLqlKL2dJv99WCBrz3vT-z_d1AquUBuXjBpe4HTnl_77XLxOQCod94lC1xr8QR-p6R3H3_pC5C75VUCPOl89ZIkrN-epOOjxAAKKv95yw"
+           
+    ```console
+    ansible-playbook reset-k8s.yaml 
+    ```
