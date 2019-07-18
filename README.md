@@ -3,14 +3,14 @@ Single master kubeadm installation on AWS ubuntu 16.04 Instance
 
 ### Prerequisites
 
-1) This example assumes that you have 1 Ansible, 1 Master and N no of worker node( Min 2 is recommended) with ubuntu16.04 OS server. See the [k8s installation doc.](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/) for details about creating a cluster.
+1) This example assumes that you have 1 Ansible, 1 Master and N no of worker node( Min 2 is recommended) with min 2CPU X 4 GBRAM servers.Here I have used t2.xlarge(4cpuX16 GBRAM) AWS instance with ubuntu-16.04Lts for better performance and additonal applicaton deployment.See the [k8s installation doc.](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/) for details about creating a cluster.
 2) Install ansible package on Ansible node. See the [Ansible installation on ubuntu server](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#latest-releases-via-apt-ubuntu) 
 
 ### Install k8s
 
 Use the `kubernetes-install.yaml` file to create a single control-plane cluster with kubeadm.
 
-1. Before executing the ansible playbook, we need to update the Nodes IP address on the host file as example below.
+1. Before executing the ansible playbook, we need to update the Nodes IP address and sudo username and Pem key for authentication on the host file as example below.
 
     ```
     [allservers]
